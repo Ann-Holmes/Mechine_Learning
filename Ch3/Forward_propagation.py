@@ -1,3 +1,4 @@
+#  "推理处理"或向前传播
 import sys, os
 sys.path.append(os.pardir)  # 为了导入父目录中的文件而设定
 import numpy as np

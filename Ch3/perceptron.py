@@ -1,3 +1,4 @@
+#  感知机
 import numpy as np
 
 
@@ -40,28 +41,24 @@ def XOR(x1, x2):
     y = AND(s1, s2)
     return y
 
-def main():
-    print(" AND")
-    print(AND(0, 0))
-    print(AND(1, 0))
-    print(AND(0, 1))
-    print(AND(1, 1))
-    print('---\n', "NAND")
-    print(NAND(0, 0))
-    print(NAND(1, 0))
-    print(NAND(0, 1))
-    print(NAND(1, 1))
-    print('---\n', "OR")
-    print(OR(0, 0))
-    print(OR(1, 0))
-    print(OR(0, 1))
-    print(OR(1, 1))
-    print('---\n', "XOR")
-    print(XOR(0, 0))
-    print(XOR(1, 0))
-    print(XOR(0, 1))
-    print(XOR(1, 1))
 
+def main():
+    print('---' + "AND")
+    for xs in [(0, 0), (1, 0), (0, 1), (1, 1)]:
+        y = AND(xs[0], xs[1])
+        print(str(xs) + " -> " + str(y))
+    print('---' + "NAND")
+    for xs in [(0, 0), (1, 0), (0, 1), (1, 1)]:
+        y = NAND(xs[0], xs[1])
+        print(str(xs) + " -> " + str(y))
+    print('---' + "OR")
+    for xs in [(0, 0), (1, 0), (0, 1), (1, 1)]:
+        y = OR(xs[0], xs[1])
+        print(str(xs) + " -> " + str(y))
+    print('---' + "XOR")
+    for xs in [(0, 0), (1, 0), (0, 1), (1, 1)]:
+        y = XOR(xs[0], xs[1])
+        print(str(xs) + " -> " + str(y))
 
 if __name__ == "__main__":
     main()
